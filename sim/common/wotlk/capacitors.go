@@ -168,9 +168,9 @@ newCapacitorDamageEffect(CapacitorDamageEffect{
 			ProcMask: core.ProcMaskSpellOrProc | core.ProcMaskWeaponProc | core.ProcMaskSuppressedProc,
 			Outcome:  core.OutcomeCrit,
 			ICD:      time.Millisecond * 2000,
-			ActionID: core.ActionID{ItemID: 90752},
+			ActionID: core.ActionID{SpellID: 200746},
 		},
-		School: core.SpellSchoolFire, core.SpellSchoolFrost, core.SpellSchoolArcane
+		School: core.SpellSchoolFire, core.SpellSchoolFrost, core.SpellSchoolArcane,
 		MinDmg: 4400,
 		MaxDmg: 4400,
 	})
