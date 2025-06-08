@@ -170,7 +170,7 @@ newCapacitorDamageEffect(CapacitorDamageEffect{
 			ICD:      time.Millisecond * 2000,
 			ActionID: core.ActionID{SpellID: 200746},
 		},
-		School: core.SpellSchoolFire, core.SpellSchoolFrost, core.SpellSchoolArcane,
+		School: core.SpellSchoolFire | core.SpellSchoolFrost | core.SpellSchoolArcane,
 		MinDmg: 4400,
 		MaxDmg: 4400,
 	})
