@@ -158,7 +158,22 @@ func init() {
 		MinDmg: 1959,
 		MaxDmg: 2275,
 	})
-
+//lets hope it works
+newCapacitorDamageEffect(CapacitorDamageEffect{
+		Name:      "Soulfang of Argent Sacrifice II",
+		ID:        90752,
+		MaxStacks: 3,
+		Trigger: core.ProcTrigger{
+			Callback: core.CallbackOnSpellHitDealt,
+			ProcMask: core.ProcMaskSpellOrProc | core.ProcMaskWeaponProc | core.ProcMaskSuppressedProc,
+			Outcome:  core.OutcomeCrit,
+			ICD:      time.Millisecond * 2000,
+			ActionID: core.ActionID{ItemID: 90752},
+		},
+		School: core.SpellSchoolFire, core.SpellSchoolFrost, core.SpellSchoolArcane
+		MinDmg: 4400,
+		MaxDmg: 4400,
+	})
 	// see various posts around https://web.archive.org/web/20100530203708/http://elitistjerks.com/f78/t39136-combat_mutilate_spreadsheets_updated_3_3_a/p96/#post1518212
 	NewItemEffectWithHeroic(func(isHeroic bool) {
 		name := "Tiny Abomination in a Jar"
